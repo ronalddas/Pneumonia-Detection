@@ -1,0 +1,5 @@
+*.h5
+.idea/
+*.pyc
+*.JPG
+*.png
