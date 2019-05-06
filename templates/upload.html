@@ -7,6 +7,9 @@
 <body>
 <img src={{value}} height="600px" width="600px">
 
-<button type="button" onclick="window.location.href='{{ url_for( 'ml' , method='cnn',imageloc=value ) }}';">Display Table Y</button>
+<button type="button" onclick="window.location.href='{{ url_for( 'ml' , method='cnn',imageloc=value ) }}';">Classify CNN</button>
+
+<button type="button" onclick="window.location.href='{{ url_for( 'ml_segnet' , method='cnn',imageloc=value ) }}';">Segmentation</button>
+
 </body>
 </html>

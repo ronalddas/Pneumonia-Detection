@@ -5,7 +5,13 @@
     <title>Pneumonia Detection</title>
 </head>
 <body>
+<button type="button" onclick="window.location.href='{{ url_for( 'home'  ) }}';">Home</button>
 <img src={{image_loc}} height="600px" width="600px">
-{{value}}
+{% if value=='0' %}
+    <h2>No Pneumonia Present</h2>
+{% elif value=='1' %}
+    <h2> Pneumonia Present</h2>
+<button type="button" onclick="window.location.href='{{ url_for( 'ml_segnet' , method='cnn_segnet',imageloc=image_loc ) }}';">Segmentation</button>
+{%endif%}
 </body>
 </html>
